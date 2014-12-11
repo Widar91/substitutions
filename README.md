@@ -4,6 +4,8 @@ ML-Substitutions
 Steps:
 
 ```
+sudo easy_install pip
+sudo pip install virtualenv
 virtualenv substitutions-env
 source substitutions-env/bin/activate
 pip install -r requirements.txt
