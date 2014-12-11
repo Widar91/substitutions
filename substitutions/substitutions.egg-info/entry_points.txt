@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = substitutions:main
+      [console_scripts]
+      initialize_substitutions_db = substitutions.scripts.initializedb:main
+      
