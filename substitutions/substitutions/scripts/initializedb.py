@@ -11,7 +11,7 @@ from pyramid.paster import (
 
 from pyramid.scripts.common import parse_vars
 
-from substitutions.item import (
+from substitutions.models.item import (
     Item,
     DBSession,
     Base
@@ -36,13 +36,17 @@ def main(argv=sys.argv):
 
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
-    
+
     with transaction.manager:
-        DBSession.add(Item(skuId='1', title='Pizza', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='2', title='Milk', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='3', title='Bread', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='4', title='Pig', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='5', title='Cheese', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='6', title='Celery', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='7', title='Apple', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item(skuId='8', title='Sandwhich', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item('1', 'Pizza', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('2', 'Bread', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('3', 'Apple', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('4', 'Cheese', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('5', 'Hotdogs', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('6', 'Celery', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('7', 'Chicken', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('8', 'Baked Beans', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('9', 'Oranges', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('10', 'Fish', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('11', 'Pasta', 'static/images/digiorno-pizza.jpg'))
+        DBSession.add(Item('12', 'Sauce', 'static/images/digiorno-pizza.jpg'))

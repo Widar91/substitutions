@@ -11,8 +11,17 @@ class Item(Base):
     __tablename__ = 'item'
     id = Column(Integer, primary_key=True)
     title = Column(Text)
-    url = Column(Text)
+    img = Column(Text)
     skuId = Column(Text)
+    dollars = Column(Integer)
+    cents = Column(Integer)
+
+    def __init__(self, skuId, title, img):
+        self.skuId = skuId
+        self.title = title
+        self.img = img
+        self.dollars = 3
+        self.cents = 88
 
     @classmethod
     def get(class_, count):

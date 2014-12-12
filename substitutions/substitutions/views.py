@@ -5,9 +5,9 @@ from sqlalchemy.exc import DBAPIError
 
 from substitutions.models.item import Item
 
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
+@view_config(route_name='home', renderer='templates/list.pt')
 def list(request):
-    items = Item.get(8)
+    items = Item.get(12)
 
     return { 'items': items };
 
