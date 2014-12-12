@@ -10,7 +10,7 @@ from .models import (
 
 
 @view_config(route_name='home', renderer='templates/mytemplate.pt')
-def my_view(request):
+def index(request):
     items = [
         {
             'title': 'Pizza',
@@ -31,20 +31,30 @@ def my_view(request):
 
     return { 'items': items };
 
+@view_config(route_name='item', renderer='templates/item.pt')
+def item(request):
+    item = { 
+            'title': 'Pizza',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '1'
+        }      
 
-conn_err_msg = """\
-Pyramid is having a problem using your SQL database.  The problem
-might be caused by one of the following things:
+    substitutions = [
+        {
+            'title': 'Pizza',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '1'
+        },
+        {
+            'title': 'Bread',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '2'
+        },
+        {
+            'title': 'Milk',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '3'
+        }
+    ]
 
-1.  You may need to run the "initialize_substitutions_db" script
-    to initialize your database tables.  Check your virtual
-    environment's "bin" directory for this script and try to run it.
-
-2.  Your database server may not be running.  Check that the
-    database server referred to by the "sqlalchemy.url" setting in
-    your "development.ini" file is running.
-
-After you fix the problem, please restart the Pyramid application to
-try it again.
-"""
-
+    return { 'item': item, 'substitutions': substitutions };
