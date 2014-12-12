@@ -11,12 +11,11 @@ from pyramid.paster import (
 
 from pyramid.scripts.common import parse_vars
 
-from ..models import (
+from substitutions.item import (
+    Item,
     DBSession,
-    MyModel,
-    Base,
+    Base
     )
-
 
 def usage(argv):
     cmd = os.path.basename(argv[0])
@@ -34,7 +33,16 @@ def main(argv=sys.argv):
     settings = get_appsettings(config_uri, options=options)
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
+
+    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
+    
     with transaction.manager:
-        model = MyModel(name='one', value=1)
-        DBSession.add(model)
+        DBSession.add(Item(skuId='1', title='Pizza', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='2', title='Milk', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='3', title='Bread', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='4', title='Pig', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='5', title='Cheese', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='6', title='Celery', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='7', title='Apple', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item(skuId='8', title='Sandwhich', url='http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
