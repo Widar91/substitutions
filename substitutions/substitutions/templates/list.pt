@@ -39,7 +39,7 @@
                 <div href="">${ item.title }</div>
               </div>
               <div class="item__controls">
-                <a href="/item/3" class="button btn button--block button--primary">
+                <a href="/item/${ item.skuId }" class="button btn button--block button--primary">
                   View Substitutions
                 </a>    
               </div>
