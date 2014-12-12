@@ -1,2 +1,4 @@
 substitutions-env
 .DS_Store
+*.pyc
+substitutions.egg-info
