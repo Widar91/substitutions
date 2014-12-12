@@ -15,7 +15,26 @@ def my_view(request):
         one = DBSession.query(MyModel).filter(MyModel.name == 'one').first()
     except DBAPIError:
         return Response(conn_err_msg, content_type='text/plain', status_int=500)
-    return {'one': one, 'project': 'substitutions'}
+
+    items = [
+        {
+            'title': 'Pizza',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '1'
+        },
+        {
+            'title': 'Bread',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '2'
+        },
+        {
+            'title': 'Milk',
+            'url': 'http://www.pizzamarket.net/images/pizza2.jpg',
+            'id': '3'
+        }
+    ]
+
+    return { 'items': items };
 
 
 conn_err_msg = """\
