@@ -8,7 +8,6 @@ from substitutions.models.item import Item
 @view_config(route_name='home', renderer='templates/list.pt')
 def list(request):
     items = Item.get(12)
-
     return { 'items': items };
 
 @view_config(route_name='item', renderer='templates/item.pt')
