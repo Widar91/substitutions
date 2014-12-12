@@ -7668,15 +7668,55 @@ a.print, .navbar, .modal, .global-footer, .button-list, .button {
 
 .navbar {
   position: relative;
+  margin-bottom: 1em;
+}
+
+.navbar__inner {
+  padding-bottom: 0.5em;
 }
 
 .navbar-heading {
   color: #fff;
+  display: inline-block;
+  float: right;
+  font-size: 75%;
+  margin-right: 0.75em;
+  text-align: right;
+}
+
+@media screen and (min-width:668px) {
+  .navbar-heading {
+    font-size: 100%;
+  }
+}
+
+.navbar-sub-head {
+  font-size: 75%;
+  line-height: 1.5;
+  display: none;
+}
+
+@media screen and (min-width:668px) {
+  .navbar-sub-head {
+    display: block;
+  }
 }
 
 .primary-nav__logo {
-  margin-bottom: .75em;
-  padding-top: 0.35em;
+  display: inline-block;
+  margin-top: 0.75em;
+}
+
+@media screen and (min-width: 668px) {
+  .primary-nav__logo {
+    margin-top: 1.25em;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .primary-nav__logo.reduced-size {
+    width: 9em; 
+  } 
 }
 
 body {
@@ -7685,4 +7725,15 @@ body {
 
 .item__controls {
   padding-top: 22px;
+}
+
+.item-detail__main h5 {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.disclaimer h5 {
+  margin: 1em 0 0.5em 0;
+  font-weight: normal;
+  color: #888888; 
 }

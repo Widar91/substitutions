@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Improving the quality of substitutions</title>
-    <link href="${request.static_url('substitutions:static/css/theme.css')}" rel="stylesheet">
     <link href="${request.static_url('substitutions:static/css/substitutions.css')}" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="navbar">
-      <div class="island-x--medium island-x--large height-full">
+      <div class="island-x--medium island-x--large height-full navbar__inner">
         <img class="primary-nav__logo reduced-size" src="${request.static_url('substitutions:static/images/walmart-grocery-logo.png')}" alt="Walmart Grocery logo" >
-        <h3 class="navbar-heading">Improving the quality of substitutions</h3>
+        <div class="navbar-heading">
+          <h3>Improving the quality of substitutions<br><span class="navbar-sub-head">a.k.a. You Can't Always Get What You Want</span></h3>
+        </div>
+        <div class="clear"></div>
       </div>
     </div>
 
-    <div class= "island-x--small island-x--medium island-x--large">
+    <div class= "island-full">
 
       <ul class="shelf-small">
-        <!-- Item List --> 
         <li tal:repeat="item items">
           <div class="item">
             <div class="item__media">
-              <a href="" class="item__photo">
+              <div class="item__photo">
                 <img src="${ item.img }" alt="">
-              </a>
+              </div>
             </div>
             <div class="item__content">
               <div class="item__prices prices">
@@ -35,10 +36,10 @@
                 </span>
               </div>
               <div class="item__title">
-                <a href="">${ item.title }</a>
+                <div href="">${ item.title }</div>
               </div>
               <div class="item__controls">
-                <a href="" class="button btn button--block button--primary">
+                <a href="/item/3" class="button btn button--block button--primary">
                   View Substitutions
                 </a>    
               </div>

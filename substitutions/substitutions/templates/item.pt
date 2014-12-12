@@ -2,23 +2,105 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Item Page</title>
-    <link href="${request.static_url('substitutions:static/theme.css')}" rel="stylesheet">
+    <title>Improving the quality of substitutions</title>
+    <link href="${request.static_url('substitutions:static/css/substitutions.css')}" rel="stylesheet">
   </head>
 
   <body>
-    <!-- Item --> 
-    <div>
-        <div>${ item.title }</div>
-        <div>${ item.url }</div>
-        <div>${ item.id }</div>
+    <div class="navbar">
+      <div class="island-x--medium island-x--large height-full navbar__inner">
+        <img class="primary-nav__logo reduced-size" src="${request.static_url('substitutions:static/images/walmart-grocery-logo.png')}" alt="Walmart Grocery logo" >
+        <div class="navbar-heading">
+          <h3>Improving the quality of substitutions<br><span class="navbar-sub-head">a.k.a. You Can't Always Get What You Want</span></h3>
+        </div>
+        <div class="clear"></div>
+      </div>
     </div>
 
-    <!-- Substitution List --> 
-    <div tal:repeat="item substitutions">
-        <div>${ item.title }</div>
-        <div>${ item.url }</div>
-        <div>${ item.id }</div>
+    <div class="item-detail  island-x--small  island-x--medium  island-x--large">
+      <div class="item-detail__controls">
+        <div class= "island-y">
+          <div class="item">
+            <div class="item__media">
+              <a href="" class="item__photo">
+                <img src="${ item.img }" alt="">
+              </a>
+            </div>
+            <div class="item__content">
+              <div class="item__prices prices">
+                <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
+                <span class="prices__extra">
+                  <span class="price-per-unit">(26.1¢/oz)</span>
+                </span>
+              </div>
+              <div class="item__title">
+                <a href="/">${ item.title }</a>
+              </div>
+              <div class="item__controls">
+                <a href="/" class="button btn button--block button--primary">
+                  No substitution
+                </a>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-detail__main">
+        <div class="island">
+          <h5>What are substitutions?</h5>
+          <p class="text-small">In case an item you want goes out of stock after you’ve submitted your order, you can help our personal shoppers select a substitution item for you.</p>
+          <p class="text-small">Based on your shopping habits and customer history, we've created a distinct list of substituion options for ${ item.title }.</p>
+        </div>
+      </div>
     </div>
+
+    <div class="island-full">
+      <div class="filter-heading">
+        <h1>
+          Substitution options for ${ item.title }:
+        </h1>
+      </div>
+    </div>
+
+    <div class= "island-full">
+      <ul class="shelf-small">
+        <li tal:repeat="item substitutions">
+          <div class="item">
+            <div class="item__media">
+              <a href="" class="item__photo">
+                <img src="${ item.img }" alt="">
+              </a>
+            </div>
+            <div class="item__content">
+              <div class="item__prices prices">
+                <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
+                <span class="prices__extra">
+                  <span class="price-per-unit">(26.1¢/oz)</span>
+                </span>
+              </div>
+              <div class="item__title">
+                <a href="">${ item.title }</a>
+              </div>
+              <div class="item__controls">
+                <a href="#" class="button btn button--block button--primary">
+                  Use as substitution
+                </a>    
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="disclaimer island-full">
+      <h5>Additional Info</h5>
+      <p>You'll never be charged extra for a substituted product, even if it's larger or more expensive. Substitutions will be clearly highlighted on your delivery note. If you are not satisfied with your substitutions, we will happily refund them. Simply hand them back to the driver and you won't be charged.</p>
+    </div>
+
+
+
+
+
+
   </body>
 </html>
