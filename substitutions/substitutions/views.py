@@ -18,8 +18,8 @@ def item(request):
     item = Item.getBySkuId(skuId)
 
     # query the collaborative filtering model here
-    #url = 'http://localhost:8080/firewall/rules/0000000000000001'
-    #req = urllib2.Request(url, data, {'Content-Type': 'application/json'})
+    #url = 'http://localhost:8080/machinelearning'
+    #req = urllib2.Request(url)
     #skuList = urllib2.urlopen(req)
     skuList = ('2','1','5','4','3') 
     substitutions = Item.getBySkuList(skuList)
