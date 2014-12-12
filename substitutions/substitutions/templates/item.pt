@@ -30,14 +30,7 @@
             </div>
             <div class="item__content">
               <div class="item__prices prices">
-<<<<<<< HEAD
-                <span class="price"><sup>$</sup>3<sup>88</sup></span>
-                <span class="prices__extra">
-                  <span class="price-per-unit">(26.1¢/oz)</span>
-                </span>
-=======
                 <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
->>>>>>> fix-design-tweaks
               </div>
               <div class="item__title">
                 <a href="/">${ item.title }</a>
@@ -80,14 +73,7 @@
             </div>
             <div class="item__content">
               <div class="item__prices prices">
-<<<<<<< HEAD
-                <span class="price"><sup>$</sup>13<sup>37</sup></span>
-                <span class="prices__extra">
-                  <span class="price-per-unit">(26.1¢/oz)</span>
-                </span>
-=======
                 <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
->>>>>>> fix-design-tweaks
               </div>
               <div class="item__title">
                 <a href="">${ item.title }</a>

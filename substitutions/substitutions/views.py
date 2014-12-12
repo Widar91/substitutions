@@ -6,8 +6,6 @@ from sqlalchemy.exc import DBAPIError
 
 from substitutions.models.item import Item
 
-import urllib2
-
 @view_config(route_name='home', renderer='templates/list.pt')
 def list(request):
     items = Item.getBySkuList(['3000113008','3000012265','3000052730','1020660','3000039841','3000052189','1020383','3000358008','1000137','3000055130','1007213','1013221','3000687121','1003222'])
