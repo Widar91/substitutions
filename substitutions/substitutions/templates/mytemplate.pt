@@ -2,16 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Alchemy Scaffold for The Pyramid Web Framework</title>
-    <link href="${request.static_url('substitutions:static/theme.css')}" rel="stylesheet">
+    <title>Improving the quality of substitutions</title>
+    <link href="${request.static_url('substitutions:static/css/theme.css')}" rel="stylesheet">
+    <link href="${request.static_url('substitutions:static/css/substitutions.css')}" rel="stylesheet">
   </head>
 
   <body>
-    <!-- Item List --> 
-    <div tal:repeat="item items">
-        <div>${ item.title }</div>
-        <div>${ item.url }</div>
-        <div>${ item.id }</div>
+
+    <div class="navbar">
+      <div class="island-x--medium island-x--large height-full">
+        <img class="primary-nav__logo reduced-size" src="${request.static_url('substitutions:static/images/walmart-grocery-logo.png')}" alt="Walmart Grocery logo" >
+        <h3 class="navbar-heading">Improving the quality of substitutions</h3>
+      </div>
     </div>
+
+    <div class= "island-x--small island-x--medium island-x--large">
+
+      <ul class="shelf-small">
+        <!-- Item List --> 
+        <li tal:repeat="item items">
+          <div class="item">
+            <div class="item__media">
+              <a href="" class="item__photo">
+                <img src="${ item.img }" alt="">
+              </a>
+            </div>
+            <div class="item__content">
+              <div class="item__prices prices">
+                <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
+                <span class="prices__extra">
+                  <span class="price-per-unit">(26.1¢/oz)</span>
+                </span>
+              </div>
+              <div class="item__title">
+                <a href="">${ item.title }</a>
+              </div>
+              <div class="item__controls">
+                <a href="" class="button btn button--block button--primary">
+                  View Substitutions
+                </a>    
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
   </body>
 </html>
