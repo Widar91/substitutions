@@ -5,6 +5,8 @@ from sqlalchemy.exc import DBAPIError
 
 from substitutions.models.item import Item
 
+import urllib2
+
 @view_config(route_name='home', renderer='templates/list.pt')
 def list(request):
     items = Item.get(12)
@@ -16,7 +18,9 @@ def item(request):
     item = Item.getBySkuId(skuId)
 
     # query the collaborative filtering model here
-    # return a list of skuId's
+    #url = 'http://localhost:8080/firewall/rules/0000000000000001'
+    #req = urllib2.Request(url, data, {'Content-Type': 'application/json'})
+    #skuList = urllib2.urlopen(req)
     skuList = ('2','1','5','4','3') 
     substitutions = Item.getBySkuList(skuList)
 
