@@ -1,10 +1,12 @@
+import math
 from substitutions.models import (DBSession, Base)
 
 from sqlalchemy import (
     Column,
     Integer,
     Text,
-    Unicode
+    Unicode,
+    Float
     )
 
 
@@ -16,6 +18,15 @@ class Item(Base):
     image_thumbnail_url = Column(Text)
     image_large_url = Column(Text)
     product_category = Column(Text)
+    unit_price = Column(Float)
+
+    @property
+    def dollars(self):
+        return math.modf(self.unit_price)[0]
+
+    @property
+    def cents(self):
+        return math.modf(self.unit_price)[1]
 
     @classmethod
     def get(class_, count):
