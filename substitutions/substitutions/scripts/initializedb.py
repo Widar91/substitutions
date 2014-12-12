@@ -37,7 +37,7 @@ def main(argv=sys.argv):
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
-    with transaction.manager:
+    '''with transaction.manager:
         DBSession.add(Item('1', 'Pizza', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
         DBSession.add(Item('2', 'Bread', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
         DBSession.add(Item('3', 'Apple', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
@@ -49,4 +49,4 @@ def main(argv=sys.argv):
         DBSession.add(Item('9', 'Oranges', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
         DBSession.add(Item('10', 'Fish', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
         DBSession.add(Item('11', 'Pasta', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
-        DBSession.add(Item('12', 'Sauce', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))
+        DBSession.add(Item('12', 'Sauce', 'http://upload.wikimedia.org/wikipedia/commons/1/10/Hot_pizza.jpg'))'''

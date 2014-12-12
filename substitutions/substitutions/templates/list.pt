@@ -25,12 +25,12 @@
           <div class="item">
             <div class="item__media">
               <div class="item__photo">
-                <img src="${ item.img }" alt="">
+                <img src="${ item.image_large_url }" alt="">
               </div>
             </div>
             <div class="item__content">
               <div class="item__prices prices">
-                <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
+                <span class="price"><sup>$</sup>3<sup>88</sup></span>
                 <span class="prices__extra">
                   <span class="price-per-unit">(26.1¢/oz)</span>
                 </span>
@@ -39,7 +39,7 @@
                 <div href="">${ item.title }</div>
               </div>
               <div class="item__controls">
-                <a href="/item/${ item.skuId }" class="button btn button--block button--primary">
+                <a href="/item/${ item.sku_id }" class="button btn button--block button--primary">
                   View Substitutions
                 </a>    
               </div>
