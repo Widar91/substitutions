@@ -9,7 +9,9 @@
   <body>
     <div class="navbar">
       <div class="island-x--medium island-x--large height-full navbar__inner">
-        <img class="primary-nav__logo reduced-size" src="${request.static_url('substitutions:static/images/walmart-grocery-logo.png')}" alt="Walmart Grocery logo" >
+        <a href="/">
+          <img class="primary-nav__logo reduced-size" src="${request.static_url('substitutions:static/images/walmart-grocery-logo.png')}" alt="Walmart Grocery logo" >
+        </a>
         <div class="navbar-heading">
           <h3>Improving the quality of substitutions<br><span class="navbar-sub-head">a.k.a. You Can't Always Get What You Want</span></h3>
         </div>

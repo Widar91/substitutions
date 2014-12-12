@@ -16,6 +16,8 @@ def item(request):
     item = Item.getBySkuId(skuId)
 
     # query the collaborative filtering model here
-    substitutions = Item.getBySkuList(('2','1','5','4','3'))
+    # return a list of skuId's
+    skuList = ('2','1','5','4','3') 
+    substitutions = Item.getBySkuList(skuList)
 
     return { 'item': item, 'substitutions': substitutions };
