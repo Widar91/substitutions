@@ -4002,20 +4002,12 @@ table.box,
   .item-detail__controls {
     float: left;
     width: 30%; } }
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  /* line 5, ../../src/scss/objects/_item-detail.scss */
-  .item-detail__controls {
-    width: 40%; } }
 
 @media screen and (min-width: 768px) {
   /* line 15, ../../src/scss/objects/_item-detail.scss */
   .item-detail__main {
     float: right;
     width: 67.5%; } }
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  /* line 15, ../../src/scss/objects/_item-detail.scss */
-  .item-detail__main {
-    width: 57.5%; } }
 
 /* line 26, ../../src/scss/objects/_item-detail.scss */
 .item-detail__alcohol-warning ul, .item-detail__alcohol-warning li {
@@ -4168,8 +4160,10 @@ table.box,
 
 /* line 1, ../../src/scss/objects/_disclaimer.scss */
 .disclaimer {
+  border-top: 1px solid #ddd;
   display: block;
-  clear: both; }
+  clear: both; 
+  padding-bottom: 1em; }
   /* line 5, ../../src/scss/objects/_disclaimer.scss */
   .disclaimer h4 {
     margin: 0;
@@ -4240,26 +4234,16 @@ table.box,
   .shelf > li,
   .shelf-small > li {
     width: 33.33333%; } }
-@media screen and (min-width: 904px) {
-  /* line 117, ../../src/scss/generic/_mixins.scss */
-  .shelf > li,
-  .shelf-small > li {
-    width: 25%; } }
-@media screen and (min-width: 1024px) {
-  /* line 117, ../../src/scss/generic/_mixins.scss */
-  .shelf > li,
-  .shelf-small > li {
-    width: 50%; } }
 @media screen and (min-width: 1114px) {
   /* line 117, ../../src/scss/generic/_mixins.scss */
   .shelf > li,
   .shelf-small > li {
-    width: 33.33333%; } }
+    width: 25%; } }
 @media screen and (min-width: 1304px) {
   /* line 117, ../../src/scss/generic/_mixins.scss */
   .shelf > li,
   .shelf-small > li {
-    width: 25%; } }
+    width: 20%; } }
 @media screen and (min-width: 1540px) {
   /* line 117, ../../src/scss/generic/_mixins.scss */
   .shelf > li,
@@ -7719,14 +7703,6 @@ a.print, .navbar, .modal, .global-footer, .button-list, .button {
   } 
 }
 
-body {
-  background: #fff;
-}
-
-.item__controls {
-  padding-top: 22px;
-}
-
 .item-detail__main h5 {
   margin-top: 15px;
   margin-bottom: 0;
@@ -7735,5 +7711,9 @@ body {
 .disclaimer h5 {
   margin: 1em 0 0.5em 0;
   font-weight: normal;
-  color: #888888; 
+  color: #888; 
+}
+
+.disclaimer  {
+  border-top: 1px solid #ddd;
 }

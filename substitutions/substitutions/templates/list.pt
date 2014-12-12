@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Improving the quality of substitutions</title>
-    <link href="${request.static_url('substitutions:static/css/substitutions.css')}" rel="stylesheet">
+    <link href="${request.static_url('substitutions:static/css/substitutions.css')}" rel="stylesheet">    
   </head>
 
   <body>
@@ -30,10 +30,7 @@
             </div>
             <div class="item__content">
               <div class="item__prices prices">
-                <span class="price"><sup>$</sup>3<sup>88</sup></span>
-                <span class="prices__extra">
-                  <span class="price-per-unit">(26.1¢/oz)</span>
-                </span>
+                <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
               </div>
               <div class="item__title">
                 <div href="">${ item.title }</div>
@@ -50,5 +47,8 @@
 
     </div>
 
+    <script src="${request.static_url('substitutions:static/js/jquery_min.js')}"></script>
+    <script src="${request.static_url('substitutions:static/js/app.js')}"></script>
+    
   </body>
 </html>
