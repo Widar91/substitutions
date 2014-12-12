@@ -31,9 +31,6 @@
             <div class="item__content">
               <div class="item__prices prices">
                 <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
-                <span class="prices__extra">
-                  <span class="price-per-unit">(26.1¢/oz)</span>
-                </span>
               </div>
               <div class="item__title">
                 <a href="/">${ item.title }</a>
@@ -52,6 +49,7 @@
           <h5>What are substitutions?</h5>
           <p class="text-small">In case an item you want goes out of stock after you’ve submitted your order, you can help our personal shoppers select a substitution item for you.</p>
           <p class="text-small">Based on your shopping habits and customer history, we've created a distinct list of substituion options for ${ item.title }.</p>
+          <p class="text-small">Please select your substitution preference below.</p>
         </div>
       </div>
     </div>
@@ -76,9 +74,6 @@
             <div class="item__content">
               <div class="item__prices prices">
                 <span class="price"><sup>$</sup>${ item.dollars }<sup>${ item.cents }</sup></span>
-                <span class="prices__extra">
-                  <span class="price-per-unit">(26.1¢/oz)</span>
-                </span>
               </div>
               <div class="item__title">
                 <a href="">${ item.title }</a>
@@ -94,15 +89,13 @@
       </ul>
     </div>
 
-    <div class="disclaimer island-full">
-      <h5>Additional Info</h5>
+     <div class="disclaimer island-full">
+      <h5>Additional Substitution Info</h5>
       <p>You'll never be charged extra for a substituted product, even if it's larger or more expensive. Substitutions will be clearly highlighted on your delivery note. If you are not satisfied with your substitutions, we will happily refund them. Simply hand them back to the driver and you won't be charged.</p>
     </div>
 
-
-
-
-
+    <script src="${request.static_url('substitutions:static/js/jquery_min.js')}"></script>
+    <script src="${request.static_url('substitutions:static/js/app.js')}"></script>
 
   </body>
 </html>
